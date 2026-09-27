@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Nos services - Espace Étudiant</title>
+
+    <style>
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #0d0d12;
+            color: white;
+        }
+
+        /* MENU */
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 7%;
+            border-bottom: 1px solid #292934;
+        }
+
+        .logo {
+            font-size: 22px;
+            font-weight: bold;
+        }
+
+        .logo span {
+            color: #22c7a9;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 25px;
+        }
+
+        nav a:hover {
+            color: #22c7a9;
+        }
+
+        /* TITRE */
+
+        .titre {
+            text-align: center;
+            padding: 90px 20px 50px;
+            background: radial-gradient(circle at top, #123b70, #0d0d12 60%);
+        }
+
+        .titre h1 {
+            font-size: 50px;
+        }
+
+        .titre h1 span {
+            color: #22c7a9;
+        }
+
+        .titre p {
+            color: #aaa;
+            font-size: 18px;
+            margin-top: 20px;
+        }
+
+        /* SERVICES */
+
+        .services {
+            display: flex;
+            justify-content: center;
+            gap: 25px;
+            flex-wrap: wrap;
+            padding: 50px 7% 90px;
+        }
+
+        .carte {
+            width: 280px;
+            background: #17171f;
+            border: 1px solid #292934;
+            border-radius: 15px;
+            padding: 30px;
+        }
+
+        .icone {
+            font-size: 35px;
+            margin-bottom: 20px;
+        }
+
+        .carte h2 {
+            color: #22c7a9;
+            margin-bottom: 15px;
+        }
+
+        .carte p {
+            color: #aaa;
+            line-height: 1.6;
+        }
+
+        .carte a {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 18px;
+            background: #22c7a9;
+            color: #07110e;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: bold;
+        }
+
+        /* FOOTER */
+
+        footer {
+            text-align: center;
+            padding: 30px;
+            border-top: 1px solid #292934;
+            color: #888;
+        }
+
+        @media (max-width: 700px) {
+
+            nav {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            nav a {
+                margin: 5px;
+            }
+
+            .titre h1 {
+                font-size: 38px;
+            }
+
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <!-- MENU -->
+
+    <nav>
+
+        <div class="logo">
+            Agence<span> BM</span>
+        </div>
+
+        <div>
+
+            <a href="index.html">Accueil</a>
+            <a href="services.html">Services</a>
+            <a href="realisations.html">Réalisations</a>
+            <a href="commande.html">Commander</a>
+
+        </div>
+
+    </nav>
+
+
+    <!-- TITRE -->
+
+    <section class="titre">
+
+        <h1>
+            Nos <span>services</span>
+        </h1>
+
+        <p>
+            Des services numériques pensés pour les élèves.
+        </p>
+
+    </section>
+
+
+    <!-- SERVICES -->
+
+    <section class="services">
+
+        <div class="carte">
+
+            <div class="icone">📚</div>
+
+            <h2>Exposés</h2>
+
+            <p>
+                Nous réalisons et mettons en forme vos exposés
+                scolaires de manière claire, propre et professionnelle.
+            </p>
+
+            <a href="commande.html">
+                Commander
+            </a>
+
+        </div>
+
+
+        <div class="carte">
+
+            <div class="icone">🎨</div>
+
+            <h2>Affiches ou prospectus</h2>
+
+            <p>
+                Création d'affiches numériques pour vos activités,
+                présentations, événements et projets scolaires.
+            </p>
+
+            <a href="commande.html">
+                Commander
+            </a>
+
+        </div>
+
+
+        <div class="carte">
+
+            <div class="icone">💻</div>
+
+            <h2>Sites web</h2>
+
+            <p>
+                Nous créons des sites web simples pour présenter
+                un projet, une activité ou une idée.
+            </p>
+
+            <a href="commande.html">
+                Commander
+            </a>
+
+        </div>
+
+
+        <div class="carte">
+
+            <div class="icone">💌</div>
+
+            <h2>Cartes d'invitation</h2>
+
+            <p>
+                Création de cartes d'invitation numériques
+                personnalisées pour vos événements.
+            </p>
+
+            <a href="commande.html">
+                Commander
+            </a>
+
+        </div>
+
+
+        <div class="carte">
+
+            <div class="icone">🖥️</div>
+
+            <h2>Création numérique (CV, etc...)</h2>
+
+            <p>
+                Besoin d'une création numérique particulière ?
+                Expliquez-nous votre idée et nous verrons ensemble
+                comment la réaliser.
+            </p>
+
+            <a href="commande.html">
+                Commander
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <!-- FOOTER -->
+
+    <footer>
+
+        © 2026 — Agence BM
+        <br>
+        Balogun Mousharaf & Bakayoko Mohamed
+
+    </footer>
+
+</body>
+</html>

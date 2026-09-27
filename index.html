@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#0d0d12">
+
+    <title>Espace Étudiant</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #0d0d12;
+            color: white;
+        }
+
+        /* MENU */
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 7%;
+            border-bottom: 1px solid #292934;
+        }
+
+        .logo {
+            font-size: 22px;
+            font-weight: bold;
+        }
+
+        .logo span {
+            color: #22c7a9;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 25px;
+        }
+
+        nav a:hover {
+            color: #22c7a9;
+        }
+
+        /* ACCUEIL */
+        .accueil {
+            text-align: center;
+            padding: 110px 20px;
+            background: radial-gradient(circle at top, #123b70, #0d0d12 60%);
+        }
+
+        .accueil h1 {
+            font-size: 55px;
+            max-width: 850px;
+            margin: auto;
+        }
+
+        .accueil h1 span {
+            color: #22c7a9;
+        }
+
+        .accueil p {
+            font-size: 19px;
+            color: #bdbdc7;
+            max-width: 650px;
+            margin: 25px auto;
+            line-height: 1.6;
+        }
+
+        .boutons {
+            margin-top: 35px;
+        }
+
+        .bouton {
+            display: inline-block;
+            padding: 14px 25px;
+            margin: 8px;
+            border-radius: 10px;
+            text-decoration: none;
+            color: white;
+            border: 1px solid #22c7a9;
+        }
+
+        .principal {
+            background: #22c7a9;
+            color: #07110e;
+        }
+
+        .bouton:hover {
+            transform: translateY(-2px);
+        }
+
+        /* SERVICES */
+        .section {
+            padding: 80px 7%;
+        }
+
+        .section h2 {
+            text-align: center;
+            font-size: 35px;
+            margin-bottom: 15px;
+        }
+
+        .description {
+            text-align: center;
+            color: #aaa;
+            margin-bottom: 45px;
+        }
+
+        .services {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .carte {
+            background: #17171f;
+            border: 1px solid #292934;
+            border-radius: 15px;
+            padding: 30px;
+            width: 250px;
+        }
+
+        .carte h3 {
+            margin-bottom: 15px;
+            color: #22c7a9;
+        }
+
+        .carte p {
+            color: #aaa;
+            line-height: 1.5;
+        }
+
+        /* PIED DE PAGE */
+        footer {
+            text-align: center;
+            padding: 30px;
+            border-top: 1px solid #292934;
+            color: #888;
+        }
+
+        @media (max-width: 700px) {
+
+            nav {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            nav a {
+                margin: 5px;
+            }
+
+            .accueil h1 {
+                font-size: 38px;
+            }
+        }
+        #installer {
+    display: none;
+    padding: 14px 25px;
+    margin: 10px;
+    border: none;
+    border-radius: 10px;
+    background: #22c7a9;
+    color: #07110e;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+#installer:hover {
+    opacity: 0.85;
+}
+    </style>
+</head>
+
+<body>
+
+    <!-- MENU -->
+    <nav>
+
+        <div class="logo">
+            Agence<span> BM</span>
+        </div>
+
+        <div>
+            <a href="index.html">Accueil</a>
+            <a href="services.html">Services</a>
+            <a href="realisations.html">Réalisations</a>
+            <a href="commande.html">Commander</a>
+            <button id="installer">📲 Installer AGENCE BM </button>
+        </div>
+
+    </nav>
+
+
+    <!-- ACCUEIL -->
+    <section class="accueil">
+
+        <h1>
+            Donnons vie à vos
+            <span>projets scolaires.</span>
+        </h1>
+
+        <p>
+            Nous sommes <strong>BAGAYOKO MOHAMED</strong> et <strong>BALOGUN MOUSHARAF</strong>,
+            deux élèves passionnés par l'informatique et la création numérique.
+        </p>
+
+        <p>
+            Nous accompagnons les élèves dans leurs exposés,
+            affiches, cartes d'invitation et projets numériques.
+        </p>
+
+        <div class="boutons">
+
+            <a href="services.html" class="bouton principal">
+                Cliquez pour découvrir nos services
+            </a>
+
+            <a href="realisations.html" class="bouton">
+                Cliquez pour voir nos réalisations
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <!-- SERVICES -->
+    <section class="section">
+
+        <h2>Ce que nous proposons</h2>
+
+        <p class="description">
+            Des créations simples, propres et adaptées aux besoins des élèves.
+        </p>
+
+        <div class="services">
+
+            <div class="carte">
+                <h3>📚 Exposés</h3>
+                <p>
+                    Création et mise en forme d'exposés scolaires.
+                </p>
+            </div>
+
+            <div class="carte">
+                <h3>🎨 Affiches et prospectus</h3>
+                <p>
+                    Création d'affiches numériques et prospectus pour vos activités.
+                </p>
+            </div>
+
+            <div class="carte">
+                <h3>💻 Sites web</h3>
+                <p>
+                    Création de petits sites web et projets informatiques.
+                </p>
+            </div>
+
+            <div class="carte">
+                <h3>💌 Cartes d'invitation et CV professionnel</h3>
+                <p>
+                    Création de cartes d'invitation numériques et de CV professionnel.
+                </p>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- PIED DE PAGE -->
+    <footer>
+
+        © 2026 — Agence BM
+        <br>
+        Balogun Mousharaf & Bakayoko Mohamed
+
+    </footer>
+<script>
+
+if ("serviceWorker" in navigator) {
+
+    navigator.serviceWorker.register("service-worker.js")
+        .then(() => {
+            console.log("AGENCE BM est prête à être installée.");
+        })
+        .catch(error => {
+            console.log("Erreur :", error);
+        });
+
+}
+
+</script>
+
+
+<script>
+
+let installation;
+
+window.addEventListener("beforeinstallprompt", event => {
+
+    event.preventDefault();
+
+    installation = event;
+
+    document.getElementById("installer").style.display = "inline-block";
+
+});
+
+
+document.getElementById("installer").addEventListener("click", async () => {
+
+    if (!installation) {
+        return;
+    }
+
+    installation.prompt();
+
+    const choix = await installation.userChoice;
+
+    if (choix.outcome === "accepted") {
+
+        console.log("AGENCE BM a été installée.");
+
+    }
+
+    installation = null;
+
+});
+
+</script>
+
+
+</body>
+</html>

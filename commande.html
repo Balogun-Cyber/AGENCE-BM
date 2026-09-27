@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Commander - Espace Étudiant</title>
+
+    <style>
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #0d0d12;
+            color: white;
+        }
+
+        /* MENU */
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 7%;
+            border-bottom: 1px solid #292934;
+        }
+
+        .logo {
+            font-size: 22px;
+            font-weight: bold;
+        }
+
+        .logo span {
+            color: #22c7a9;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 25px;
+        }
+
+        nav a:hover {
+            color: #22c7a9;
+        }
+
+        /* TITRE */
+
+        .titre {
+            text-align: center;
+            padding: 70px 20px 40px;
+        }
+
+        .titre h1 {
+            font-size: 45px;
+        }
+
+        .titre h1 span {
+            color: #22c7a9;
+        }
+
+        .titre p {
+            color: #aaa;
+            margin-top: 15px;
+        }
+
+        /* FORMULAIRE */
+
+        .formulaire {
+            width: 90%;
+            max-width: 650px;
+            margin: 20px auto 80px;
+            background: #17171f;
+            border: 1px solid #292934;
+            border-radius: 15px;
+            padding: 35px;
+        }
+
+        label {
+            display: block;
+            margin-top: 20px;
+            margin-bottom: 8px;
+        }
+
+        input,
+        select,
+        textarea {
+            width: 100%;
+            padding: 13px;
+            border-radius: 8px;
+            border: 1px solid #363640;
+            background: #0d0d12;
+            color: white;
+            font-size: 15px;
+        }
+
+        textarea {
+            height: 130px;
+            resize: vertical;
+        }
+
+        button {
+            width: 100%;
+            margin-top: 30px;
+            padding: 15px;
+            border: none;
+            border-radius: 8px;
+            background: #22c7a9;
+            color: #07110e;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        button:hover {
+            opacity: 0.9;
+        }
+
+        /* FOOTER */
+
+        footer {
+            text-align: center;
+            padding: 30px;
+            border-top: 1px solid #292934;
+            color: #888;
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- MENU -->
+
+    <nav>
+
+        <div class="logo">
+            Agence<span> BM</span>
+        </div>
+
+        <div>
+
+            <a href="index.html">Accueil</a>
+
+            <a href="services.html">Services</a>
+
+            <a href="realisations.html">Réalisations</a>
+
+            <a href="commande.html">Commander</a>
+
+        </div>
+
+    </nav>
+
+
+    <!-- TITRE -->
+
+    <section class="titre">
+
+        <h1>
+            Passez votre <span>commande</span>
+        </h1>
+
+        <p>
+            Remplissez le formulaire pour nous expliquer votre projet.
+        </p>
+
+    </section>
+
+
+    <!-- FORMULAIRE -->
+
+    <form class="formulaire" onsubmit="envoyerWhatsApp(); return false;">
+
+        <label>Nom et prénom</label>
+
+        <input
+            type="text"
+            id="nom"
+            placeholder="Exemple : Agence BM"
+            required
+        >
+
+
+        <label>Votre classe</label>
+
+        <select id="classe" required>
+
+            <option value="">Choisissez votre classe</option>
+
+            <option>6e</option>
+            <option>5e</option>
+            <option>4e</option>
+            <option>3e</option>
+
+            <option>Seconde A</option>
+            <option>Seconde C</option>
+
+            <option>Première A</option>
+            <option>Première D</option>
+            <option>Première C</option>
+
+            <option>Terminale A</option>
+            <option>Terminale D</option>
+            <option>Terminale C</option>
+
+            <option>Autre</option>
+
+        </select>
+
+
+        <label>Établissement</label>
+
+        <input
+            type="text"
+            id="etablissement"
+            placeholder="Nom de votre établissement"
+            required
+        >
+
+
+        <label>Que voulez-vous commander ?</label>
+
+        <select id="service" required>
+
+            <option value="">Choisissez un service</option>
+
+            <option>Exposé</option>
+            <option>Affiche</option>
+            <option>Prospectus</option>
+            <option>Site web</option>
+            <option>Carte d'invitation</option>
+            <option>CV professionnel</option>
+            <option>Création numérique</option>
+            <option>Autre</option>
+
+        </select>
+
+
+        <label>Expliquez votre demande</label>
+
+        <textarea
+            id="demande"
+            placeholder="Expliquez-nous ce dont vous avez besoin(theme et critere souhaité)..."
+            required
+        ></textarea>
+
+
+        <label>Date souhaitée</label>
+
+        <input
+            type="date"
+            id="date"
+            required
+        >
+
+
+        <label>Votre numéro WhatsApp</label>
+
+        <input
+            type="tel"
+            id="telephone"
+            placeholder="Exemple : 07 XX XX XX XX"
+            required
+        >
+
+
+        <button type="submit">
+            💬 Envoyer ma demande sur WhatsApp
+        </button>
+
+    </form>
+
+
+    <!-- FOOTER -->
+
+    <footer>
+
+        © 2026 — Agence BM
+        <br>
+
+        Balogun Mousharaf & Bakayoko Mohamed
+
+    </footer>
+
+
+    <!-- JAVASCRIPT -->
+
+    <script>
+
+        function envoyerWhatsApp() {
+
+            let nom = document.getElementById("nom").value;
+
+            let classe = document.getElementById("classe").value;
+
+            let etablissement =
+                document.getElementById("etablissement").value;
+
+            let service =
+                document.getElementById("service").value;
+
+            let demande =
+                document.getElementById("demande").value;
+
+            let date =
+                document.getElementById("date").value;
+
+            let telephone =
+                document.getElementById("telephone").value;
+
+
+            let message =
+                "Bonjour Mousharaf et Mohamed 👋%0A%0A" +
+
+                "Je souhaite commander un service.%0A%0A" +
+
+                "👤 Nom : " + nom + "%0A" +
+
+                "🎓 Classe : " + classe + "%0A" +
+
+                "🏫 Établissement : " + etablissement + "%0A" +
+
+                "🛠️ Service : " + service + "%0A" +
+
+                "📝 Ma demande : " + demande + "%0A" +
+
+                "📅 Date souhaitée : " + date + "%0A" +
+
+                "📱 Mon WhatsApp : " + telephone;
+
+
+            /* 
+               REMPLACE LE NUMÉRO CI-DESSOUS
+               PAR VOTRE NUMÉRO WHATSAPP.
+            */
+
+            let numero = "2250160251021";
+
+
+            let lien =
+                "https://wa.me/" + numero +
+                "?text=" + message;
+
+
+            window.open(lien, "_blank");
+
+        }
+
+    </script>
+
+
+</body>
+
+</html>
